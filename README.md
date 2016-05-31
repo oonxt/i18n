@@ -101,6 +101,14 @@ To use I18n with QOR, simply add it as resource to the admin:
 ```go
  Admin.AddResource(I18n)
  ```
+To enable more locales, simple add AvailableLocales to the User struct:
+
+```go
+func (user User) AvailableLocales() []string {
+	return []string{"en-US", "zh-CN"}
+}
+```
+ 
 
 [QOR Demo:  http://demo.getqor.com/admin](http://demo.getqor.com/admin)
 
